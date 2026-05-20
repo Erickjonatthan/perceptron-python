@@ -1,0 +1,38 @@
+# Atualizacoes de pesos do perceptron
+
+Codificacao: Nao = 0, Sim = 1
+Atributos: [bias, estudou, fez_trabalho]
+
+Funcao de ativacao: se ativacao > 0, h(x) = 1; se ativacao <= 0, h(x) = 0
+
+### Ciclo 1
+Exemplo 1: x = [1, 0, 0] | y = 0 | ativacao = 0.0000 | h(x) = 0 | erro = 0
+Erro 0: os pesos nao foram atualizados.
+
+Exemplo 2: x = [1, 0, 1] | y = 0 | ativacao = 0.0000 | h(x) = 0 | erro = 0
+Erro 0: os pesos nao foram atualizados.
+
+Exemplo 3: x = [1, 1, 0] | y = 1 | ativacao = 0.0000 | h(x) = 0 | erro = 1
+Pesos anteriores: [0.0000, 0.0000, 0.0000]
+Atualizacao: w_j = w_j + 0.1 * 1 * x_j
+Pesos atualizados: [0.1000, 0.1000, 0.0000]
+
+Exemplo 4: x = [1, 1, 1] | y = 1 | ativacao = 0.2000 | h(x) = 1 | erro = 0
+Erro 0: os pesos nao foram atualizados.
+
+### Ciclo 2
+Exemplo 1: x = [1, 0, 0] | y = 0 | ativacao = 0.1000 | h(x) = 1 | erro = -1
+Pesos anteriores: [0.1000, 0.1000, 0.0000]
+Atualizacao: w_j = w_j + 0.1 * -1 * x_j
+Pesos atualizados: [0.0000, 0.1000, 0.0000]
+
+Exemplo 2: x = [1, 0, 1] | y = 0 | ativacao = 0.0000 | h(x) = 0 | erro = 0
+Erro 0: os pesos nao foram atualizados.
+
+Exemplo 3: x = [1, 1, 0] | y = 1 | ativacao = 0.1000 | h(x) = 1 | erro = 0
+Erro 0: os pesos nao foram atualizados.
+
+Exemplo 4: x = [1, 1, 1] | y = 1 | ativacao = 0.1000 | h(x) = 1 | erro = 0
+Erro 0: os pesos nao foram atualizados.
+
+Pesos finais: [0.0000, 0.1000, 0.0000]
